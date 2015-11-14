@@ -1,0 +1,20 @@
+{
+  "name": "multicodec-doc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "beefy ./lib/index.js --live",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "multistream-select": "^0.6.3",
+    "stream-pair": "^1.0.3"
+  },
+  "devDependencies": {
+    "beefy": "^2.1.5",
+    "browserify": "^12.0.1"
+  }
+}
