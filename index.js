@@ -42,7 +42,7 @@ msi.handle(pair, function() {
       return console.log(err)
     }
 
-    ds.write('wollllf');
+    ds.write('wollll');
     ds.end();
   });
 });
