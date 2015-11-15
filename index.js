@@ -6,6 +6,7 @@ var pair = streamPair.create();
 var msi = new Interactive();
 var mss = new Select();
 
+var events = require('./lib/events')
 
 mss.handle(pair.other);
 
@@ -17,6 +18,7 @@ mss.addHandler('/xxx/', function(ds) {
     ds.end();
   });
 });
+
 mss.addHandler('/wtf/', function(ds) {
   ds.on('data', function(chunk) {
     console.log(chunk.toString());
@@ -33,7 +35,6 @@ msi.handle(pair, function() {
     if (err) {
       return console.log(err)
     }
-
     console.log('results: ', result);
   });
 
@@ -46,3 +47,15 @@ msi.handle(pair, function() {
     ds.end();
   });
 });
+
+var client = events();
+
+client.init()
+
+client.on('fail', function () {
+  console.log('fail')
+})
+
+client.on('message', function (message) {
+  console.log(message)
+})
