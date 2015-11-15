@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "beefy ./lib/index.js --live",
+    "dev": "beefy index:build.js --live ",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
